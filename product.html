@@ -10,19 +10,34 @@
   .container{
     max-width: 1700px;
   }
-    .section__container {
+  .section__container {
     padding: 3rem 1rem;
   }
+  .product__card{
+  isolation: isolate;
+  height: 300px;
+}
+.product__card::before {
+  display: none;
+}
   .product__card img{
+    height: 100%;
     border: 2px solid var(--text-dark);
+  transition: all ease 0.3s;
+  }
+  .product__card img:hover{
+    transform: scale(1.1);
   }
 .footer__bar{
   background-color: var(--primary-color);
   }
-@media (width > 768px) {
+@media (width > 1000px) {
   .product__grid {
     grid-template-columns: repeat(4, 1fr);
   }
+  .product__card{
+  height: 370px;
+}
 }
 </style>
 <body>
